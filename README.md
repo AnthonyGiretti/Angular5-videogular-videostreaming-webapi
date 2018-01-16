@@ -68,13 +68,12 @@ For more details about Videogular you can visit the website: (Videogular)[http:/
 
 ### Use FilStreamResult in your controller to stream a video
 
-``
-[Route("api/[controller]")]
- public class StreamingController : Controller
- {
-     private IAzureVideoStreamService _streamingService;``
+``[Route("api/[controller]")]``
+ ``public class StreamingController : Controller``
+ ``{
+     private IAzureVideoStreamService _streamingService;
 
-     ``public StreamingController(IAzureVideoStreamService streamingService)
+     public StreamingController(IAzureVideoStreamService streamingService)
      {
          _streamingService = streamingService;
      }
