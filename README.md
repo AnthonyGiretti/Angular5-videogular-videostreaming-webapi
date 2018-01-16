@@ -67,8 +67,8 @@ For more details about Videogular you can visit the website: (Videogular)[http:/
 ## Set up ASP.NET Core Web API:
 
 ### Use FilStreamResult in your controller to stream a video
-``
- [Route("api/[controller]")]
+
+``[Route("api/[controller]")]
     public class StreamingController : Controller
     {
         private IAzureVideoStreamService _streamingService;
@@ -84,8 +84,7 @@ For more details about Videogular you can visit the website: (Videogular)[http:/
             var stream = await _streamingService.GetVideoByName(name);
             return new FileStreamResult(stream, "video/mp4");
         }
-    }
-``
+    }``
 Just launch the Web API and select your streamed video like this: http://localhost:{your port}/api/streaming/nature2 and http://localhost:{your port}/api/streaming/nature1
 
 Then build your gallery! :)
