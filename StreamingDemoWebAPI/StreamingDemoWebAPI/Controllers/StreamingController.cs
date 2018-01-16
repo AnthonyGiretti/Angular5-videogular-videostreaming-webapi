@@ -19,11 +19,7 @@ namespace StreamingDemoWebAPI.Controllers
         public async Task<FileStreamResult> Get(string name)
         {
             var stream = await _streamingService.GetVideoByName(name);
-            return new FileStreamResult(stream, "video/mp4")
-            {
-                //Add a filename to download it
-                //FileDownloadName = "nature.mp4"
-            };
+            return new FileStreamResult(stream, "video/mp4");
         }
     }
 }
