@@ -70,7 +70,7 @@ For more details about Videogular you can visit the website: (Videogular)[http:/
 
 ``
 [Route("api/[controller]")]
- ``public class StreamingController : Controller
+ public class StreamingController : Controller
  {
      private IAzureVideoStreamService _streamingService;
 
