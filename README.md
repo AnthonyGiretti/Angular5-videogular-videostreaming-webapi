@@ -68,23 +68,24 @@ For more details about Videogular you can visit the website: (Videogular)[http:/
 
 ### Use FilStreamResult in your controller to stream a video
 
-``[Route("api/[controller]")]
-    public class StreamingController : Controller
-    {
-        private IAzureVideoStreamService _streamingService;
+``
+[Route("api/[controller]")]``
+ ``public class StreamingController : Controller
+ {
+     private IAzureVideoStreamService _streamingService;
 
-        public StreamingController(IAzureVideoStreamService streamingService)
-        {
-            _streamingService = streamingService;
-        }
+     public StreamingController(IAzureVideoStreamService streamingService)
+     {
+         _streamingService = streamingService;
+     }
 
-        [HttpGet("{name}")]
-        public async Task<FileStreamResult> Get(string name)
-        {
-            var stream = await _streamingService.GetVideoByName(name);
-            return new FileStreamResult(stream, "video/mp4");
-        }
-    }``
+     [HttpGet("{name}")]
+     public async Task<FileStreamResult> Get(string name)
+     {
+         var stream = await _streamingService.GetVideoByName(name);
+         return new FileStreamResult(stream, "video/mp4");
+     }
+ }``
 Just launch the Web API and select your streamed video like this: http://localhost:{your port}/api/streaming/nature2 and http://localhost:{your port}/api/streaming/nature1
 
 Then build your gallery! :)
