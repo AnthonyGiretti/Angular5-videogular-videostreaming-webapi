@@ -37,8 +37,8 @@ npm install @types/core-js --save-dev
 ### To start using Videogular in your project you have to add the Videogular module to your application module.
 
 Open src/app/app.module.ts and remove the FormsModule and the HttpModule, we will not need that for this demo. This is how your app.module.ts file should like:
-``
-import {NgModule} from "@angular/core";
+
+``import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
 import {VgCoreModule} from "videogular2/core";
 import {VgControlsModule} from "videogular2/controls";
