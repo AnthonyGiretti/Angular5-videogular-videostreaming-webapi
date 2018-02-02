@@ -1,5 +1,6 @@
 # Angular5-videogular-videostreaming-webapi
 Example of a streaming platform built with Angular5, Videogular and a streaming ASP.NET Core Web API
+
 Compatibility : Chrome, Firefox, Microsoft Edge
 
 ![Streaming gallery](http://anthonygiretti.com/wp-content/uploads/2018/01/runstreamingvideo-1.png)
